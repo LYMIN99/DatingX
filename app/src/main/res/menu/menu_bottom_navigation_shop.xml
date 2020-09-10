@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/bot_message"
+        android:icon="@drawable/ic_chat"
+        android:checked="true"
+        android:title="Message" />
+    <item
+        android:id="@+id/bot_explore"
+        android:icon="@drawable/ic_round_explore_24"
+        android:title="Explore" />
+
+    <item
+        android:id="@+id/bot_settings"
+        android:icon="@drawable/ic_person"
+        android:title="Settings" />
+
+</menu>

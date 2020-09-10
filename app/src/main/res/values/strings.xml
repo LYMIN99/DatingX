@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Dating-X</string>
+    <string name="icon">Icon</string>
+    <string name="GOT_IT">GOT IT</string>
+    <string name="app_version">App version</string>
+    <string name="version_unknown">version unknown</string>
+    <string name="SKIP">SKIP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
