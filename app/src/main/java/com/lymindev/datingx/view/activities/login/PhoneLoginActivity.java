@@ -1,11 +1,9 @@
 package com.lymindev.datingx.view.activities.login;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -22,15 +20,21 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
-import com.lymindev.datingx.MainActivity;
 import com.lymindev.datingx.R;
 import com.lymindev.datingx.databinding.ActivityPhoneLoginBinding;
+import com.lymindev.datingx.firebases.FirebaseService;
+import com.lymindev.datingx.managers.UsersManager;
+import com.lymindev.datingx.model.user.UsersModel;
+import com.lymindev.datingx.model.user.UsersRealm;
 import com.lymindev.datingx.view.DialogAllCountryCode;
+import com.lymindev.datingx.view.activities.BaseActivity;
 import com.lymindev.datingx.view.activities.signup.SignUpStepOneGanderActivity;
 
 import java.util.concurrent.TimeUnit;
 
-public class PhoneLoginActivity extends AppCompatActivity {
+import io.realm.Realm;
+
+public class PhoneLoginActivity extends BaseActivity {
 
     private ActivityPhoneLoginBinding binding;
     private ProgressDialog p;
@@ -44,10 +48,7 @@ public class PhoneLoginActivity extends AppCompatActivity {
     private static final int STATE_VERIFY_SUCCESS = 4;
     private static final int STATE_SIGNIN_FAILED = 5;
     private static final int STATE_SIGNIN_SUCCESS = 6;
-
-    // [START declare_auth]
     private FirebaseAuth mAuth;
-    // [END declare_auth]
 
     private boolean mVerificationInProgress = false;
     private String mVerificationId;
@@ -58,6 +59,8 @@ public class PhoneLoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this,R.layout.activity_phone_login);
+
+        Realm.init(this);
 
         p =  new ProgressDialog(this);
 
@@ -70,7 +73,11 @@ public class PhoneLoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                startPhoneNumberVerification(binding.edPhone.getText().toString());
+                p.setMessage("Sending verifying code..");
+                p.show();
+                String phone = binding.spinnerCode+binding.edPhone.getText().toString().trim();
+
+                startPhoneNumberVerification(phone);
             }
         });
 
@@ -259,10 +266,12 @@ public class PhoneLoginActivity extends AppCompatActivity {
                 Log.d(TAG, "updateUI: B");
                 binding.layout1.setVisibility(View.GONE);
                 binding.layout2.setVisibility(View.VISIBLE);
+                p.dismiss();
                 break;
             case STATE_VERIFY_FAILED:
                 // Verification has failed, show all options
                 Log.d(TAG, "updateUI: C");
+                p.dismiss();
                 break;
             case STATE_VERIFY_SUCCESS:
                 // Verification has succeeded, proceed to firebase sign in
@@ -274,15 +283,16 @@ public class PhoneLoginActivity extends AppCompatActivity {
                         binding.edVerify.setText(cred.getSmsCode());
                     }
                 }
-
-
+                p.dismiss();
                 break;
             case STATE_SIGNIN_FAILED:
                 // No-op, handled by sign-in check
                 Log.d(TAG, "updateUI: E");
+                p.dismiss();
                 break;
             case STATE_SIGNIN_SUCCESS:
                 // Np-op, handled by sign-in check
+                Log.d(TAG, "updateUI: SS");
                 break;
         }
 
@@ -291,8 +301,15 @@ public class PhoneLoginActivity extends AppCompatActivity {
             Log.d(TAG, "updateUI: F");
         } else {
             // Signed in
-            Log.d(TAG, "updateUI: G");
-        }
+            Log.d(TAG, "updateUI: G "+user.getUid());
+            UsersModel usersM = new UsersModel(
+                    user.getUid(),  "", "", "", "", "", "", "","",0.0, 0.0);
+            UsersRealm usersR = new UsersRealm(
+                    user.getUid(),  "", "", "", "", "", "", "","",0.0, 0.0);
+            FirebaseService.addNewUser(usersM);
+            new UsersManager().addUser(usersR);
+            SignUpStepOneGanderActivity.launch(PhoneLoginActivity.this,user.getUid());
+            }
     }
 
     private boolean validatePhoneNumber() {

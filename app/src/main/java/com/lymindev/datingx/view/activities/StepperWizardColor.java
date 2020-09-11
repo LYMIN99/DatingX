@@ -14,7 +14,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -22,7 +21,7 @@ import com.lymindev.datingx.R;
 import com.lymindev.datingx.view.activities.login.LoginActivity;
 import com.lymindev.datingx.utils.Tools;
 
-public class StepperWizardColor extends AppCompatActivity {
+public class StepperWizardColor extends BaseActivity {
 
     private static final int MAX_STEP = 4;
 

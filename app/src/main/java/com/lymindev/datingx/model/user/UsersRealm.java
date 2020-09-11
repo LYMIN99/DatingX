@@ -3,11 +3,10 @@ package com.lymindev.datingx.model.user;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
-public class Users extends RealmObject {
+public class UsersRealm extends RealmObject {
 
     @PrimaryKey
     private String id;
-    private String userID;
     private String name;
     private String profile;
     private String address;
@@ -16,10 +15,25 @@ public class Users extends RealmObject {
     private String about;
     private String email;
     private String age;
+    private double latitude;
+    private double longitude;
 
-    public Users() {
+    public UsersRealm() {
     }
 
+    public UsersRealm(String id, String name, String profile, String address, String gander, String dateOfBirth, String about, String email, String age, double latitude, double longitude) {
+        this.id = id;
+        this.name = name;
+        this.profile = profile;
+        this.address = address;
+        this.gander = gander;
+        this.dateOfBirth = dateOfBirth;
+        this.about = about;
+        this.email = email;
+        this.age = age;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
 
     public String getId() {
         return id;
@@ -29,12 +43,20 @@ public class Users extends RealmObject {
         this.id = id;
     }
 
-    public String getUserID() {
-        return userID;
+    public double getLatitude() {
+        return latitude;
     }
 
-    public void setUserID(String userID) {
-        this.userID = userID;
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 
     public String getName() {
