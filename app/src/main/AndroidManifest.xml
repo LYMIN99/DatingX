@@ -9,11 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.login.PhoneLoginActivity"></activity>
-        <activity android:name=".activities.user.EditInfoActivity" />
-        <activity android:name=".activities.me.MyProfileActivity" />
-        <activity android:name=".activities.user.UserProfileActivity" />
-        <activity android:name=".activities.login.LoginActivity" />
+        <activity android:name=".view.activities.signup.SignUpStepFiveLocationActivity"></activity>
+        <activity android:name=".view.activities.signup.SignUpStepFourProfileActivity" />
+        <activity android:name=".view.activities.signup.SignUpStepThreeDobActivity" />
+        <activity android:name=".view.activities.signup.SignUpStepThowNameActivity" />
+        <activity android:name=".view.activities.signup.SignUpStepOneGanderActivity" />
+        <activity android:name=".view.activities.login.PhoneLoginActivity" />
+        <activity android:name=".view.activities.user.EditInfoActivity" />
+        <activity android:name=".view.activities.me.MyProfileActivity" />
+        <activity android:name=".view.activities.user.UserProfileActivity" />
+        <activity android:name=".view.activities.login.LoginActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".activities.StepperWizardColor" />
+        <activity android:name=".view.activities.StepperWizardColor" />
     </application>
 
 </manifest>

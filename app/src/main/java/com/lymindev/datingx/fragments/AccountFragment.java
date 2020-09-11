@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.lymindev.datingx.R;
-import com.lymindev.datingx.activities.user.EditInfoActivity;
+import com.lymindev.datingx.view.activities.user.EditInfoActivity;
 import com.lymindev.datingx.databinding.FragmentAccountBinding;
 
 

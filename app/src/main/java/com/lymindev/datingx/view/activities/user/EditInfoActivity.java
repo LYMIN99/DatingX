@@ -1,4 +1,4 @@
-package com.lymindev.datingx.activities.user;
+package com.lymindev.datingx.view.activities.user;
 
 import androidx.appcompat.app.AppCompatActivity;
 

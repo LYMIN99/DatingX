@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.lymindev.datingx.activities.StepperWizardColor;
+import com.lymindev.datingx.view.activities.StepperWizardColor;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".activities.user.UserProfileActivity">
+    tools:context=".view.activities.user.UserProfileActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:background="@color/transparent"

@@ -1,14 +1,12 @@
-package com.lymindev.datingx.activities.login;
+package com.lymindev.datingx.view.activities.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.lymindev.datingx.MainActivity;
 import com.lymindev.datingx.R;
 import com.lymindev.datingx.databinding.ActivityLoginBinding;
 

@@ -1,4 +1,4 @@
-package com.lymindev.datingx.activities;
+package com.lymindev.datingx.view.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,9 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.lymindev.datingx.MainActivity;
 import com.lymindev.datingx.R;
-import com.lymindev.datingx.activities.login.LoginActivity;
+import com.lymindev.datingx.view.activities.login.LoginActivity;
 import com.lymindev.datingx.utils.Tools;
 
 public class StepperWizardColor extends AppCompatActivity {

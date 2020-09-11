@@ -1,9 +1,8 @@
-package com.lymindev.datingx.activities.user;
+package com.lymindev.datingx.view.activities.user;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 import com.lymindev.datingx.R;

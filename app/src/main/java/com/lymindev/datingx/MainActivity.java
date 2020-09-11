@@ -10,6 +10,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.lymindev.datingx.databinding.ActivityMainBinding;
 import com.lymindev.datingx.fragments.AccountFragment;
 import com.lymindev.datingx.fragments.ChatsFragment;
+import com.lymindev.datingx.fragments.ExploreCardFragment;
 import com.lymindev.datingx.fragments.ExploreFragment;
 
 import android.os.Bundle;
@@ -24,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
 
         binding.navigation.setSelectedItemId(R.id.bot_explore);
-        setFragment(new ExploreFragment());
+        setFragment(new ExploreCardFragment());
         binding.navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.bot_message : setFragment(new ChatsFragment()); break;
-                    case R.id.bot_explore : setFragment(new ExploreFragment()); break;
+                    case R.id.bot_explore : setFragment(new ExploreCardFragment()); break;
                     case R.id.bot_settings : setFragment(new AccountFragment()); break;
                 }
                 return true;

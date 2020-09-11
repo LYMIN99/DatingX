@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.signup.SignUpStepOneGanderActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="30sp"
+        android:fontFamily="@font/liquid"
+        android:layout_below="@id/icon"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/pink_500"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:layout_margin="25dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hey! You're..."
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginVertical="30dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:elevation="10dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/circle_shape_white">
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/men_sign"
+
+                    android:scaleType="centerInside"
+                    android:background="@color/transparent"
+                    android:tint="@color/blue_900"
+                    android:padding="25dp"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1dp"/>
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:elevation="10dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/circle_shape_white">
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/women_sign"
+                    android:scaleType="centerInside"
+                    android:background="@color/transparent"
+                    android:tint="@color/colorPrimary"
+                    android:padding="25dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

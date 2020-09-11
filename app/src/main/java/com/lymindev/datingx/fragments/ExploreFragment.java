@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
@@ -18,12 +17,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lymindev.datingx.R;
-import com.lymindev.datingx.activities.StepperWizardColor;
-import com.lymindev.datingx.activities.user.UserProfileActivity;
+import com.lymindev.datingx.view.activities.user.UserProfileActivity;
 import com.lymindev.datingx.databinding.FragmentExploreBinding;
 
 
