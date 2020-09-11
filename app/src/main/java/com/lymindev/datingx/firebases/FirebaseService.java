@@ -87,7 +87,7 @@ public class FirebaseService {
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                Log.d(TAG, "onSuccess: sss "+documentSnapshot.getData().toString());
+            //    Log.d(TAG, "onSuccess: sss "+documentSnapshot.getData().toString());
                 UsersModel city = documentSnapshot.toObject(UsersModel.class);
                 Log.d(TAG, "onSuccess: sss x "+city.getProfile());
                 users[0] = city;
