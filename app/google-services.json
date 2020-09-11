@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "537342131360",
+    "firebase_url": "https://myinstagram-99.firebaseio.com",
+    "project_id": "myinstagram-99",
+    "storage_bucket": "myinstagram-99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537342131360:android:f98bff851dc2be74081dc5",
+        "android_client_info": {
+          "package_name": "com.lymindev.datingx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537342131360-btlc1qv3fjq029o1lrgug4p29tmmdm4j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgUFS3MlI1PiIcTJrZmwK8wlvOReJGw3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537342131360-btlc1qv3fjq029o1lrgug4p29tmmdm4j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

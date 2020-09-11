@@ -35,13 +35,12 @@ public class CountriesListAdapter extends ArrayAdapter<String> {
         String[] g=values[position].split(",");
         textView.setText(GetCountryZipCode(g[1]).trim() + " (+"+g[0]+")");
 
-
         String pngName = g[1].trim().toLowerCase();
         imageView.setImageResource(context.getResources().getIdentifier("drawable/" + pngName, null, context.getPackageName()));
         return rowView;
     }
 
-    private String GetCountryZipCode(String ssid){
+    public String GetCountryZipCode(String ssid){
         Locale loc = new Locale("", ssid);
         return loc.getDisplayCountry().trim();
     }

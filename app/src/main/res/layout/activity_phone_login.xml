@@ -70,6 +70,7 @@
                 android:layout_height="0dp" />
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Phone Number"
@@ -136,104 +137,24 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_verify"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:inputType="number"
-                android:maxLength="1"
+                android:maxLength="6"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textColor="@color/grey_90"
                 android:textStyle="bold" />
 
-            <View
-                android:layout_width="@dimen/spacing_medium"
-                android:layout_height="0dp" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:inputType="number"
-                android:maxLength="1"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="@color/grey_90"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="@dimen/spacing_medium"
-                android:layout_height="0dp" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:inputType="number"
-                android:maxLength="1"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="@color/grey_90"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="@dimen/spacing_medium"
-                android:layout_height="0dp" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:inputType="number"
-                android:maxLength="1"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="@color/grey_90"
-                android:textStyle="bold" />
-            <View
-                android:layout_width="@dimen/spacing_medium"
-                android:layout_height="0dp" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:inputType="number"
-                android:maxLength="1"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="@color/grey_90"
-                android:textStyle="bold" />
-            <View
-                android:layout_width="@dimen/spacing_medium"
-                android:layout_height="0dp" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:inputType="number"
-                android:maxLength="1"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="@color/grey_90"
-                android:textStyle="bold" />
 
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_verify"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
