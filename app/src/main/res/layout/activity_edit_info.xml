@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,6 +17,7 @@
         android:background="@android:color/white"
         >
         <ImageButton
+            android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="15dp"
@@ -46,6 +49,7 @@
                     android:padding="10dp"
                     android:orientation="vertical">
                     <TextView
+                        android:id="@+id/tv_username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@android:color/black"
@@ -72,6 +76,7 @@
                             android:layout_height="1dp"
                             android:layout_weight="1"/>
                         <TextView
+                            android:id="@+id/tv_gander"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@android:color/black"
@@ -97,6 +102,7 @@
                             android:layout_height="1dp"
                             android:layout_weight="1"/>
                         <TextView
+                            android:id="@+id/tv_age"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@android:color/black"
@@ -122,6 +128,7 @@
                             android:layout_height="1dp"
                             android:layout_weight="1"/>
                         <TextView
+                            android:id="@+id/tv_email"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@android:color/black"
@@ -146,14 +153,19 @@
                             android:layout_width="0dp"
                             android:layout_height="1dp"
                             android:layout_weight="1"/>
+
                         <TextView
+                            android:id="@+id/tv_address"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@android:color/black"
                             android:gravity="center_vertical"
                             android:textSize="15sp"
                             android:drawableEnd="@drawable/ic_arrow_right"
-                            android:text="Woman"/>
+                            android:maxLength="30"
+                            android:layout_marginStart="10dp"
+                            android:text="Womaasdfadfasfsadfasdfsadfafsdfsfn"/>
+
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -178,6 +190,7 @@
                             android:text="0/250"/>
                     </LinearLayout>
                     <EditText
+                        android:id="@+id/ed_about"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:hint="Enter you detail"
@@ -193,9 +206,12 @@
                         android:textStyle="bold"
                         android:textSize="20sp"
                         android:layout_margin="10dp"
+                        android:visibility="gone"
                         android:text="Other"/>
 
                     <Switch
+                        android:id="@+id/switch_age"
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Don't show my age"
@@ -204,6 +220,8 @@
                         android:textColor="@color/grey_800"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
                     <Switch
+                        android:visibility="gone"
+                        android:id="@+id/switch_distance"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Don't show my distance"
@@ -218,3 +236,5 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

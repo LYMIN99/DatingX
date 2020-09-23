@@ -10,10 +10,12 @@ import android.util.Log;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.lymindev.datingx.constance.Constants;
 import com.lymindev.datingx.firebases.FirebaseService;
 import com.lymindev.datingx.managers.UsersManager;
 import com.lymindev.datingx.model.user.UsersModel;
 import com.lymindev.datingx.model.user.UsersRealm;
+import com.lymindev.datingx.tools.SharePreferenceX;
 import com.lymindev.datingx.view.activities.BaseActivity;
 import com.lymindev.datingx.view.activities.StepperWizardColor;
 import com.lymindev.datingx.view.activities.login.LoginActivity;
@@ -32,6 +34,9 @@ public class SplashScreenActivity extends BaseActivity {
             @Override
             public void run() {
                 if (firebaseUser != null) {
+                    FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                    new SharePreferenceX(SplashScreenActivity.this).savePreferences(Constants.SharePref.currentUserID,firebaseUser.getUid());
+
                     UsersRealm usersRealm = new UsersManager().getUserInfo(firebaseUser.getUid());
                     if (usersRealm !=null) {
                         if (usersRealm.getName().equals("")) {

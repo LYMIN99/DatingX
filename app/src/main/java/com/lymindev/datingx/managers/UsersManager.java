@@ -99,4 +99,5 @@ public class UsersManager {
         Realm realm = Realm.getInstance(config);
         return realm.where(UsersRealm.class).equalTo("id",id).findFirst();
     }
+
 }

@@ -7,11 +7,15 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.lymindev.datingx.constance.Constants;
 import com.lymindev.datingx.databinding.ActivityMainBinding;
 import com.lymindev.datingx.fragments.AccountFragment;
 import com.lymindev.datingx.fragments.ChatsFragment;
 import com.lymindev.datingx.fragments.ExploreCardFragment;
 import com.lymindev.datingx.fragments.ExploreFragment;
+import com.lymindev.datingx.tools.SharePreferenceX;
 
 import android.os.Bundle;
 import android.view.MenuItem;

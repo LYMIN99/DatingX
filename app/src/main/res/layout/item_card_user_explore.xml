@@ -33,7 +33,7 @@
                 android:layout_alignParentBottom="true"
                 android:padding="15dp"
                 android:transitionName="layoutTransaction"
-                android:background="@color/mdtp_transparent_black"
+
                 android:orientation="vertical">
 
                 <LinearLayout
